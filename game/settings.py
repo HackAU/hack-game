@@ -1,7 +1,6 @@
 import os
 from django.utils import timezone
-import dj_database_url   ####not working for my case
-
+import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -16,7 +15,8 @@ SECRET_KEY = 'ab6s@xb50l5w89l8q%qn9ou3&(3tf9)h*fwbuu%i&bm=3tyj@o'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'hack-game-test.herokuapp.com'
+    'hack-game-test.herokuapp.com',
+    'localhost'
 ]
 
 
@@ -35,8 +35,6 @@ INSTALLED_APPS = [
 
 STATIC_URL = '/static/'
 
-# TODO: CHANGE THIS TO YOUR STATIC!
-# STATIC_ROOT = ''
 
 # Application definition
 AUTH_USER_MODEL = 'gameapp.User'
@@ -79,6 +77,14 @@ WSGI_APPLICATION = 'game.wsgi.application'
 # DATABASES = {
   
 #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'db_the_game'
+#     'USER': 'postgres',
+#     'PASSWORD': '9352221'
+#     } 
+
+# DATABASES = {
+  
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #     'NAME': 'db_the_game',
 #     'USER': 'nuglrtpzesslld',
 #     'PASSWORD': 'dff8cf260d38fa31360739e3077a49df5a109ffd3e2ff556a7abc1df18d1863e'
@@ -86,7 +92,6 @@ WSGI_APPLICATION = 'game.wsgi.application'
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
-
 
 
 # Password validation

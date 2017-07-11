@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>{% block title %}The Game{% endblock %}</title>
@@ -20,19 +21,16 @@
     </nav>
 
     <div class="container">
-        <a href="/"><img class="game-logo" src="/static/img/gamelogo.png"></a>
-        {% if user.is_authenticated %}
-        Hello, {{user}}!
+        <a href="/"><img class="game-logo" src="/static/img/gamelogo.png"></a> {% if user.is_authenticated %} Hello, {{user}}!
 
-	<div class="top-forms">
+        <div class="top-forms">
             <form action="/logout/" method="post">
                 {% csrf_token %}
                 <input type="submit" value="Logout" />
             </form>
         </div>
-        {% else %}
-        Hello, Anon!
-	<div class="top-forms">
+        {% else %} Hello, Anon!
+        <div class="top-forms">
             <form class="login-form-button" action="/login/" method="get">
                 <input type="submit" value="Login" />
             </form>
@@ -40,17 +38,23 @@
                 <input type="submit" value="Register" />
             </form>
         </div>
-        {% endif %}
-
-        {% block content %}{% endblock %}
-        <div class="row bottom-links hacker">
+        {% endif %} {% block content %}{% endblock %}
+        <!--<div class="row bottom-links hacker">
             <div class="col-md-12">
                 <a class="fa fa-3x fa-envelope hacker" href="mailto:contact@hackupc.com"></a>
                 <a class="fa fa-3x fa-twitter hacker" href="https://twitter.com/hackupc"></a>
                 <a class="fa fa-3x fa-facebook-official hacker" href="https://facebook.com/hackupc"></a>
                 <a class="fa fa-3x fa-github hacker" href="https://github.com/hackupc"></a>
             </div>
+        </div>-->
+
+        <div class="flex-center-social">
+            <a href=""><i class="fa fa-github fa-2x icon-3d"> </i></a>
+            <a href=""><i class="fa fa-facebook fa-2x icon-3d"></i></a>
+            <a href=""><i class="fa fa-twitter fa-2x icon-3d"></i></a>
+            <a href=""><i class="fa fa-instagram fa-2x icon-3d"></i></a>
         </div>
+
     </div>
     {% block scripts %}{% endblock %}
     <script>
@@ -59,4 +63,5 @@
     </script>
     <script src="/static/js/life.js"></script>
 </body>
+
 </html>
