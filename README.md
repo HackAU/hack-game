@@ -24,3 +24,6 @@ Run sass script: `./sassit.sh`
 
 # Adding new levels
 Right now, levels are located in gameapp/templates/levels/. Put your level in a html, and add a new entry to `LEVEL_INFO`. The i-th entry is the i-th level.
+
+#original requirement: 
+psycopg
