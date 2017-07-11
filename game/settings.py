@@ -15,7 +15,9 @@ SECRET_KEY = 'ab6s@xb50l5w89l8q%qn9ou3&(3tf9)h*fwbuu%i&bm=3tyj@o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'hack-game-test.herokuapp.com'
+]
 
 
 INSTALLED_APPS = [
