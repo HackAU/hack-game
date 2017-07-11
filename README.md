@@ -21,9 +21,9 @@ run server: `python manage.py runserver 0.0.0.0:8000`
 
 #### Deploy to Heroku
 
-configure heruko buildpack for post/pre script exec using node package.json:
+configure heruko buildpack for post/pre script exec using node package.json: <br>
 `heroku buildpacks:set heroku/python -a hack-game`<br>
-`heroku buildpacks:add --index 1 heroku/nodejs -a hack-game`<br>
+`heroku buildpacks:add --index 1 heroku/nodejs -a hack-game`
 
 add scripts like that:
 `
