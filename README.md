@@ -1,4 +1,4 @@
-# TheGame
+# Pre-hackathon Hacking Game
 
 # Setup
 Sass is required to build css: `sudo gem install sass`
@@ -21,6 +21,20 @@ run server: `python manage.py runserver 0.0.0.0:8000`
 
 #### Deploy to Heroku
 
+configure heruko buildpack for post/pre script exec using node package.json:
+`heroku buildpacks:set heroku/python -a hack-game`
+`heroku buildpacks:add --index 1 heroku/nodejs -a hack-game`
+
+add scripts like that:
+`
+"scripts": {
+    "postinstall": "gulp sass"
+  }
+`
+
+added Procfile which will migrate db and start server:
+`web: python manage.py migrate & python manage.py runserver 0.0.0.0:$PORT
+`
 
 
 # credits
