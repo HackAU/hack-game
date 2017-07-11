@@ -32,9 +32,8 @@ add scripts like that:
   }
 `
 
-added Procfile which will migrate db and start server:
-`web: python manage.py migrate & python manage.py runserver 0.0.0.0:$PORT
-`
+added Procfile which will migrate db and start server: <br>
+`web: python manage.py migrate & python manage.py runserver 0.0.0.0:$PORT`
 
 
 # credits
