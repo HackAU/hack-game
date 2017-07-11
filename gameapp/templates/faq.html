@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block nav-faq %}<strong>FAQ</strong>{% endblock %}
+{% block content %}
+        <h2>What is The Game?</h2>
+        <p>The Game is a side event during HackUPC, consisting of few challenges that you have to solve in the given time. These challenges can involve maths, code and multimedia. There are no limits in the tools you can use. Any anouncements will be given through #thegame channel on HackUPC Slack.</p>
+
+        <h2>Are there any prizes?</h2>
+        <p>Top 1 will get a Pebble Smartwatch. Top 10 people in the ranking will be awarded an exclusive The Game T-shirt!</p>
+
+        <h2>How many challenges are in The Game?</h2>
+        <p>In this edition, there are {{num_problems}} problems (including level 0). They are meant to be in increasing difficulty, but this can be subjective.</p>
+
+        <h2>How long does The Game last?</h2>
+        <p>You can play The Game as long as it is opened. It starts on {{start_time}}, and ends on {{end_time}}</p>
+
+        <h2>My solution is wrong</h2>
+        <p>Keep trying, you may be close to the answer! Note that <strong>all solutions are lowercase, and only contain letters from english alphabet, and numbers</strong>.</p>
+        <p>The maximum length is <strong>130 characters</strong> as well.</p>
+
+        <h2>But I'm sure my solution is correct!</h2>
+        <p>It can happen that we made a mistake. If you strongly believe our solution is wrong, please let us know on #thegame channel on slack. Any correction we make during the event will be announced on slack.</p>
+
+        <h2>My solution is so slow!</h2>
+        <p>Try to come up with a better approach :). All expected solutions run in under 10 seconds on a light laptop. Most of the solutions run in less than a second.</p>
+
+{% endblock %}

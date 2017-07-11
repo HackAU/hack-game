@@ -1,0 +1,35 @@
+<h1>Box Management</h1>
+<p>
+HackUPC is getting huge. We get shipped lots of supplies and swag for hackers, but logistics get more complicated. During the organization, we keep receiving boxes with items all the times, and at any time, we may need to access some particular box for its contents to prepare the hackathon.
+</p>
+
+<p>
+We store boxes in a single line, one box after the other. Whenever a box arrives, we put it in the first spot in the line with enough space. If the box was size 'x' and is placed at position 'p', it occupies the range ['p', 'p+x'). Whenever we need items from a particular box, we take it from position p, and never place it again in the line. Since the number of boxes can be really big, help us make this task faster!
+</p>
+
+
+<h3>Input</h3>
+<p>Input begins with integer N, the number of queries.</p>
+<p>Query 'A id x' means a box with given id arrives with size 'x'.</p>
+<p>Query 'N id' means we need the box with given id.</p>
+<br>
+<p>For each query of type 'A', the answer is the position where the box is placed.</p>
+<p>For each query of type 'N', the answer is the position where the box was stored.</p>
+
+<p>The answer to this problem is the sum of all answers to each query.</p>
+
+<h3>Sample Input</h3>
+<pre>
+5
+A 1 5
+A 2 10
+A 3 5
+N 2
+A 4 15
+</pre>
+
+<h3>Sample Output</h3>
+<pre>45</pre>
+
+
+<a href='/static/files/box_management.zip'>Download Input</a>

@@ -1,0 +1,40 @@
+<h1>Private Lessons</h1>
+<p>
+Alice wants to earn some extra money giving private lessons to Computer Science students. She has a list of people she can give lessons to, and although she's a great student, she'd need to review some material from books to give the perfect lesson.
+</p>
+
+<p>There is a list of people she can give lessons, with the money she'd earn for the lessons.</p>
+<p>Each lesson has a list of books she'd need to buy to give the perfect lesson. If she doesn't have all the books, she can't give the lesson. But books cost certain amount of money each.</p>
+
+<p>Help Alice find the maximum profit she can get if she chooses the optimal lessons.</p>
+
+<br>
+<p>Input starts with integer T followed by T test cases.</p>
+
+<p>Each test case starts with integers L B, indicating number of Lessons and Books.</p>
+
+<p>Follows L lines describing the lessons with the following format:</p>
+<p>M K, describing the money Alice would get from the lesson, and the number of Books required, followed by K integers B1 ... Bk. Bi is the id of the i-th book required.  All books in a lesson are guaranteed to be unique, and from 0 to B-1.</p>
+
+<p>Follows B integers, i-th one describing the cost of buying i-th book.</p>
+
+<br>
+<p>The answer to this challenge is the sum of all maximum profits of all cases.</p>
+
+<h3>Sample Input</h3>
+<pre>
+1
+2 1
+10 1 0
+5 1 0
+7
+</pre>
+<h3>Sample Output</h3>
+<pre>
+8
+</pre>
+<i>In the sample input, there are two lessons, each of them require book 0. Book 0 costs 7 euros. Doing all lessons provide 15 euros. The total profit is 15 - 7 = 8.</i>
+
+<br>
+<br>
+<p><a href='/static/files/private_lessons.zip'>Input file</a></p>

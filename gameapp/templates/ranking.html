@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block nav-ranking %}<strong>Ranking</strong>{% endblock %}
+{% block content %}
+    <h1>Ranking</h1>
+    {% if contest_running %}
+        <h3>Time remaining: <span id="secondsLeft">{{time_left.seconds}}</span></h3>
+  <script>
+        function timeRemaining(seconds) {
+          if (seconds < 0) seconds = 0;
+          const orig = seconds;
+          const days = Math.floor(seconds / (3600*24));
+          seconds %= (3600*24);
+          const hours = Math.floor(seconds / 3600);
+          seconds %= 3600;
+          const minutes = Math.floor(seconds / 60);
+          seconds %= 60;
+          return ""
+            + days + (days == 1 ? " day, " : " days, ")
+            + hours + (hours == 1 ? " hour " : " hours " )
+            + minutes + (minutes == 1 ? " minute " : " minutes ")
+            + seconds + (seconds == 1 ? " second" : " seconds")
+        }
+        var secondsTillHack = {{time_left.seconds}} + {{time_left.days}}*3600*24;
+        document.getElementById("secondsLeft").textContent = timeRemaining(secondsTillHack);
+        setInterval(function() {
+            secondsTillHack--;
+            document.getElementById("secondsLeft").textContent =
+              timeRemaining(secondsTillHack);
+        }, 1000);
+  </script>
+    {% endif %}
+
+    <table class="table">
+        <tr>
+            <th>User</th>
+            <th>Level</th>
+            <th>Time</th>
+        </tr>
+        {% for u in users %}
+            <tr {% if u.username == user.username %}class="me"{% endif %}>
+                <td>{{u.username}}</td>
+                <td>{{u.level}}{% if u.level >= levellength %} - Finished {% endif %}</td>
+                <td>{% if u.level >= 0 %}{{u.level_date|date:"SHORT_DATETIME_FORMAT"}}{% endif %}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

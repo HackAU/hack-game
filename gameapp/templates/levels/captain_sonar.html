@@ -1,0 +1,42 @@
+<h1>Captain Sonar</h1>
+
+<p>Alice and Bob are playing a simplified version of the boardgame Captain Sonar.</p>
+
+<p>Alice is controlling a submarine that moves through a map represented by a grid of cells. Each cell contains either water (marked with a dot), or land (marked with an X). The map is always surrounded by land and the submarine is always on a water cell.<p>
+
+<p>Each time Alice says a direction, the submarine moves one cell in that direction.<p>
+<p>Directions can be North (N), South (S), West (W) and East (E).</p>
+
+<p>Bob doesn't know where the submarine started, and he cannot deduce it as there may be more than one initial valid position, given all the information.<p>
+<p>Now Bob wants to know the number of possitions where the submarine could be after all orders from Alice.<p>
+<br>
+<p>Input consists on many cases.<p>
+<p>Each case starts with integers N M, number of rows and columns, followed by a line with Alice's orders.<p>
+<p>Next there are N lines of M characters each, describing the map.<p>
+
+<p>Assume the number of rows and columns will not exceed 1000, and orders will not contain more than 500 directions each.</p>
+
+<p>The answer to this challenge is the sum of all cases</p>
+
+<h3>Sample Input</h3>
+
+<pre>
+4 5
+SE
+XXXXX
+X..XX
+X...X
+XXXXX
+4 4
+EEE
+XXXX
+X..X
+X..X
+XXXX
+</pre>
+
+<h3>Sample Output</h3>
+<pre>2</pre>
+<p>Note that the second case has 0 valid ending positions.</p>
+
+<a href='/static/files/captain_sonar.zip'>Input file</a>
