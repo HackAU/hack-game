@@ -1,0 +1,7 @@
+.sass-cache
+*.sqlite3
+*.pyc
+*.css
+env/
+package-lock.json
+node_modules/
