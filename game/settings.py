@@ -80,7 +80,7 @@ DATABASES = {
     'USER': 'nuglrtpzesslld',
     'PASSWORD': 'dff8cf260d38fa31360739e3077a49df5a109ffd3e2ff556a7abc1df18d1863e'
     } 
-}
+
 
 
 # Password validation
