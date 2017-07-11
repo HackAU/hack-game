@@ -74,16 +74,11 @@ WSGI_APPLICATION = 'game.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-    #  'HOST': '',
-    # 'PORT': 'db_port_number',
+  
     'ENGINE': 'django.db.backends.postgresql_psycopg2',
     'NAME': 'db_the_game',
-    'USER': 'postgres',
-    'PASSWORD': '9352221'
+    'USER': 'nuglrtpzesslld',
+    'PASSWORD': 'dff8cf260d38fa31360739e3077a49df5a109ffd3e2ff556a7abc1df18d1863e'
     } 
 }
 
