@@ -1,5 +1,6 @@
 import os
 from django.utils import timezone
+import dj_database_url   ####not working for my case
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -73,13 +74,16 @@ WSGI_APPLICATION = 'game.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
+# DATABASES = {
   
-    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    'NAME': 'db_the_game',
-    'USER': 'nuglrtpzesslld',
-    'PASSWORD': 'dff8cf260d38fa31360739e3077a49df5a109ffd3e2ff556a7abc1df18d1863e'
-    } 
+#     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     'NAME': 'db_the_game',
+#     'USER': 'nuglrtpzesslld',
+#     'PASSWORD': 'dff8cf260d38fa31360739e3077a49df5a109ffd3e2ff556a7abc1df18d1863e'
+#     } 
+
+DATABASES = {}
+DATABASES['default'] = dj_database_url.config()
 
 
 
