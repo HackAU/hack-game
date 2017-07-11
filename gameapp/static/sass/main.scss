@@ -24,6 +24,7 @@ ul {
     margin-top: 20px;
 }
 
+
 pre {
     background-color: $hdark;
     color: $hlight;
@@ -152,4 +153,13 @@ h1 {
         text-decoration: none;
         padding: 0.4em;
     }
+}
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
 }
